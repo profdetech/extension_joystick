@@ -1,4 +1,4 @@
-//% weight=1000 color=#00aced icon="\uf11b"
+//% weight=999 color=#00aced icon="\uf11b"
 namespace joystick{
 	/**
 	 * P0 = joystick analogique axe X --
