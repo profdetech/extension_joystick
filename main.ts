@@ -44,4 +44,26 @@ namespace joystick{
         } else return false;
     }
 
+/**
+     * Retour de la valeur du joystick axe x
+     */
+    //% blockId=axex
+    //% block="valeur numérique de l'axe X du joystick (entre 0 et 1024)"
+	//% weight=78 blockGap=2
+    //% group="Chaîne d'information - acquérir"
+    export function axex(): number {
+		            return pins.analogReadPin(AnalogPin.P0);
+        } 
+
+/**
+     * Retour de la valeur du joystick axe y
+     */
+    //% blockId=axey
+    //% block="valeur numérique de l'axe Y du joystick (entre 0 et 1024)"
+	//% weight=78 blockGap=2
+    //% group="Chaîne d'information - acquérir"
+    export function axey(): number {
+		            return pins.analogReadPin(AnalogPin.P1);
+        } 
+
 }
