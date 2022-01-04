@@ -5,10 +5,10 @@ namespace joystick{
 	 * P14 =  --
 	 * P1 = joystick analogique axe Y --
 	 * P15 =  --
-	 * P2 =  --
-	 * P16 =  --
-	 * P12 = gachette gauche -- 
-	 * P13 = gachette droite --
+	 * P2 =  gachette gauche --
+	 * P16 = gachette droite --
+	 * P12 =  -- 
+	 * P13 =  --
 	 * P8 =  --
 	 */
     //% blockId=portail_descriptif
@@ -19,27 +19,27 @@ namespace joystick{
     }
 
     	/**
-     * Etat du fin de course gachette gauche sur P12
+     * Etat du fin de course gachette gauche sur P2
      */
     //% blockId=GachetteG
     //% block="Gachette Gauche appuyée (vrai ou faux)"
 	//% weight=78 blockGap=2
     //% group="Chaîne d'information - acquérir"
     export function GachetteG(): boolean {
-		if (pins.digitalReadPin(DigitalPin.P12) == 1) {
+		if (pins.digitalReadPin(DigitalPin.P2) == 1) {
             return true;
         } else return false;
     }
 
     	/**
-     * Etat du fin de course gachette droite sur P13
+     * Etat du fin de course gachette droite sur P16
      */
     //% blockId=GachetteD
     //% block="Gachette Droite appuyée  (vrai ou faux)"
 	//% weight=78 blockGap=2
     //% group="Chaîne d'information - acquérir"
     export function GachetteD(): boolean {
-		if (pins.digitalReadPin(DigitalPin.P13) == 1) {
+		if (pins.digitalReadPin(DigitalPin.P16) == 1) {
             return true;
         } else return false;
     }
